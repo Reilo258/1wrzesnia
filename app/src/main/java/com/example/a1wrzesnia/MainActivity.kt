@@ -11,5 +11,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var obraz = findViewById<ImageView>(R.id.obraz)
+        var vis = findViewById<Button>(R.id.visbtn)
+
+        vis.setOnClickListener {
+            if(obraz.isVisible == true) {
+                vis.text = "Pokaż zdjęcie";
+                obraz.isVisible = false;
+            }
+            else {
+                vis.text = "Ukryj zdjęcie";
+                obraz.isVisible = true;
+            }
+        }
     }
 }
